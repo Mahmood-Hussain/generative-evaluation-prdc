@@ -4,6 +4,7 @@
 
 
 ### __This is a fork of original repository with some extra features like CLI, VGG16__ 
+With the help of this package, it is simple to calculate the ```prdc``` score on your custom datasets. Additionally, it supports the ```R64, R4096, and T4096``` scoring systems from the original study. By just including a directory path in the options, you may easily execute it on custom datasets. See the illustration below.
 
 <p>The requirements are necessary because dataloaders are written in pytorch and models are downloaded from torchvision.</p>
 
