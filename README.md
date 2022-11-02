@@ -5,6 +5,40 @@
 
 ### __This is a fork of original repository with some extra features like CLI, VGG16__ 
 
+<p>The requirements are necessary because dataloaders are written in pytorch and models are downloaded from torchvision.</p>
+
+### Installation
+
+```bash
+pip3 install prdc_cli
+```
+
+### Example
+
+CLI: Test between two directories orignal and a fake one 
+
+```
+prdc_cli --real-dir '/path/real' --fake_dir '/path/fake' --type 'R' --device 'cuda' --k 5
+```
+
+<pre><code>--real_dir: Path to real images directory
+--fake_dir: Path to fake images directory
+--out_feats: (default 64) Number of output features from vgg16
+--type: 'R|T' (default R) Use pretrained (T) or random (R) vgg16
+--batch_size: (default 64) Batch size for dataloader
+--num_workers: (default 4) Number of workers for dataloader
+--device: 'cpu|cuda' (default cpu) Device to use for extracting embeddings from vgg16
+--nearest_k: (default 5) Number of nearst neighbors</pre></code>
+
+<p>Additional Requirements<p>
+
+```
+torch
+torchvision
+Pillow
+tqdm
+```
+
 ## Reliable Fidelity and Diversity Metrics for Generative Models (ICML 2020)
 
 [Paper: Reliable Fidelity and Diversity Metrics for Generative Models](https://arxiv.org/abs/2002.09797)
@@ -83,31 +117,6 @@ In the figure above, while the fake samples are generally far from the modes in 
 
 
 ## 2. Usage
-
-### Installation
-
-```bash
-pip3 install prdc_cli
-```
-
-### Example
-
-CLI: Test between two directories orignal and a fake one 
-
-```
-prdc_cli --real-dir '/path/real' --fake_dir '/path/fake' --type 'R' --device 'cuda' --k 5
-```
-
-<pre><code>--real_dir: Path to real images directory
---fake_dir: Path to fake images directory
---out_feats: (default 64) Number of output features from vgg16
---type: 'R|T' (default R) Use pretrained (T) or random (R) vgg16
---batch_size: (default 64) Batch size for dataloader
---num_workers: (default 4) Number of workers for dataloader
---device: 'cpu|cuda' (default cpu) Device to use for extracting embeddings from vgg16
---nearest_k: (default 5) Number of nearst neighbors</pre></code>
-
-
 
 Test 10000 real and fake samples form the standard normal distribution N(0,I) in 1000-dimensional Euclidean space.
 Set the nearest neighbour `k=5`. We compute precision, recall, density, and coverage estimates below.
