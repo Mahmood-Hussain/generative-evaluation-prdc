@@ -1,3 +1,15 @@
+Metadata-Version: 2.1
+Name: prdc-cli
+Version: 0.0.1
+Summary: Compute precision, recall, density, and coverage metrics for custom datasets
+Home-page: https://github.com/mahmood-hussain/prdc
+Author: NAVER Corp., Mahmood Hussain
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+
 [![PyPI version](https://badge.fury.io/py/prdc.svg)](https://badge.fury.io/py/prdc)
 [![PyPI download month](https://img.shields.io/pypi/dm/prdc.svg)](https://pypi.python.org/pypi/prdc/)
 [![PyPI license](https://img.shields.io/pypi/l/prdc.svg)](https://pypi.python.org/pypi/prdc/)

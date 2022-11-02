@@ -1,0 +1,2 @@
+[console_scripts]
+prdc_cli = prdc.prdc_cli:main
